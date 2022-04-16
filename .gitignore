@@ -27,6 +27,8 @@ yarn-error.log*
 
 /api
 
+netlify.toml
+
 ## /
 package-lock.json
 
