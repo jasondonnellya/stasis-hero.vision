@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Stasis Hero: Vision
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is Stasis Hero: Vision
 
-## Available Scripts
+Stasis Hero Vision is a canon multiplayer text adventure that is set in the world of Stasis Hero.
+I have decided to make the code open source as a way to help junior web or game developers.
 
-In the project directory, you can run:
+## Setup
 
-### `npm start`
+Clone down this repository, open cmd on the root directory and then:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run
+`npm i`.
+`cd server`
+`npm i`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Running locally
 
-### `npm test`
+The / root directory is a React App and the /server directory is run using Express and Nodemon.
+The purpose of this was to increase performance of the app as much as possible and since there is no routing I decided to avoid using a Server Side Renderer.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Production
 
-### `npm run build`
+Production is very basic as Express is rigged to serve the static build folder in the root directory so that the API is hosted on the same url.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Simply run `npm run start` in the root directory and node will take care of the rest, however please note that only the server will update if edited and the react app will not update until rebuilt.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Both the app and server will run on `localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development
 
-### `npm run eject`
+For running in development you will need to run both the React App and the server folder seperately so that both can rebuild the changes on save.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run `npm run dev` in the root directory.
+Open another integrated terminal of the server.
+Run `npm run dev` again in the new terminal.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app will run on `localhost:3000` while the server will run on `localhost:1337`.
