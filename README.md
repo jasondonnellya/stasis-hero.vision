@@ -10,9 +10,9 @@ I have decided to make the code open source as a way to help junior web or game 
 Clone down this repository, open cmd on the root directory and then:
 
 Run
-`npm i`.
-`cd server`
-`npm i`
+* `npm i`
+* `cd server`
+* `npm i`
 
 ## Running locally
 
@@ -31,8 +31,8 @@ Both the app and server will run on `localhost:3000`.
 
 For running in development you will need to run both the React App and the server folder seperately so that both can rebuild the changes on save.
 
-Run `npm run dev` in the root directory.
-Open another integrated terminal of the server.
-Run `npm run dev` again in the new terminal.
+* Run `npm run dev` in the root directory.
+* Open another integrated terminal of the server.
+* Run `npm run dev` again in the new terminal.
 
 The app will run on `localhost:3000` while the server will run on `localhost:1337`.
