@@ -1,6 +1,7 @@
 import Head from './head/_';
 
 function App() {
+  console.log(process.env)
   return (
     <div className="App">
       <Head />
