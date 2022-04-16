@@ -1,7 +1,16 @@
+import { useEffect } from 'react'
+
 import Head from './head/_';
+import axios from 'axios';
 
 function App() {
-  console.log(process.env)
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await axios.get(window.API_URL + '/api')
+      console.log(data)
+    }
+    fetchData()
+  }, [])
   return (
     <div className="App">
       <Head />

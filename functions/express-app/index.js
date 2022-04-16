@@ -15,7 +15,7 @@ export default function expressApp(functionName) {
   const routerBasePath = process.env.NODE_ENV === 'dev' ? `/${functionName}` : `/.netlify/functions/${functionName}/`
 
   router.get('/', (req, res) => {
-    res.send(`index`)
+    res.json({ body: `index` })
   });
 
   /**
@@ -57,9 +57,8 @@ export default function expressApp(functionName) {
   // Attach logger
   //app.use(morgan(customLogger))
   // Setup routes
+  app.use(cors({ origin: 'http://localhost:3000' }))
   app.use(routerBasePath, router)
-  // Apply express middlewares
-  router.use(cors())
   return app
   /**/
 }

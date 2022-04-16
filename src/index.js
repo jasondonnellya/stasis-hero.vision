@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 
 import { _registerHelpers } from './helpers.js';
 _registerHelpers();
-console.log(window.API_URL)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
