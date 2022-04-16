@@ -25,7 +25,12 @@ app.use(express.static(path.join(__dirname, '..', 'build')));
   * ! Testing 
   */
 app.get('/test', (req, res) => {
-  res.send('express is running')
+  res.send(`
+    express is running
+
+    <br><br>
+    NODE_ENV: ${process.env.NODE_ENV}
+  `)
 });
 /**/
 
