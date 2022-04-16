@@ -1,7 +1,10 @@
 {
-  "name": "client",
+  "name": "vision.stasishero.com",
+  "description": "Stasis Hero: Vision is a multiplayer text adventure set in the world of Stasis Hero",
   "version": "0.1.0",
   "private": true,
+  "author": "Stasis Hero",
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -12,7 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "SET NODE_ENV=production&npm run build && (cd server && npm start)",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
