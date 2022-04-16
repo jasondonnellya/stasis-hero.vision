@@ -1,3 +1,3 @@
 export function _registerHelpers() {
-    window.API_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:9000' : '/.netlify/functions';
+    window.API_URL = '/.netlify/functions'; //'http://localhost:9000'
 }
