@@ -3,7 +3,7 @@
 ## What is Stasis Hero: Vision
 
 Stasis Hero Vision is a canon multiplayer text adventure that is set in the world of Stasis Hero.
-I have decided to make the code open source as a way to help junior web or game developers.
+I have decided to make the code open source as a way to help junior web or game developers and for anyone who is interested in how the project runs.
 
 ## Setup
 
