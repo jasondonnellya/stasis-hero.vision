@@ -5,3 +5,7 @@
   publish = "build"
   # functions build directory
   functions = "api"
+
+[dev]
+  targetPort = 3000
+  command = "npm run start"

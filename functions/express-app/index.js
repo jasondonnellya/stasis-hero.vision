@@ -1,6 +1,7 @@
 /**
   * * Setup
   * ? Ref: https://github.com/netlify-labs/netlify-functions-express/blob/master/functions/app/index.js
+  * ? Proxy: https://answers.netlify.com/t/how-to-configure-react-dev-and-lambda-serve-to-run-same-time-on-same-port/14133
   */
 
 import express from 'express'
