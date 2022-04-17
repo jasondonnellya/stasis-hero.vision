@@ -25,13 +25,10 @@ yarn-error.log*
 
 ###### Custom
 
-/api
-
-netlify.toml
-
-## /
+## / (root)
 package-lock.json
 
 ## /server
 /server/package-lock.json
 /server/node_modules
+/server/.env
