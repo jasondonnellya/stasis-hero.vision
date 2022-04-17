@@ -1,6 +1,9 @@
+let counter = 0
+
 class Room {
     constructor({ users, optionsString }) {
         this.users = users;
+        this.id = counter++;
         this.mobs = [];
         this.objs = [];
         this.tile = {};
@@ -17,6 +20,10 @@ class Room {
         //
         this.optionsString = optionsString;
         this.generate();
+
+        /**
+         * TODO: Open WebSocket that links to frontend easily for each room?
+         */
     }
 
     generate() {
@@ -46,6 +53,10 @@ class Room {
          */
         const state = require('./state.js')
         state.removeRoom(this);
+        /**
+         * TODO: Close web socket?
+         */
+
     }
 }
 

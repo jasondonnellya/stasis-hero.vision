@@ -1,5 +1,5 @@
 const state = (() => {
-    const Chat = require('./chat.js'); 
+    const Chat = require('./Chat.js'); 
     const users = {};
     const rooms = {};
     const chat = new Chat();
@@ -8,14 +8,10 @@ const state = (() => {
             return users;
         },
         userJoined: (user) => {
-            /**
-             * TODO: add user to users object
-             */
+            users[user.name] = user;
         },
         userLeft: (user) => {
-            /**
-             * TODO: remove user from users object
-             */
+            delete users[user.name];
         },
 
         addAction: ({ user, action }) => {
@@ -29,11 +25,11 @@ const state = (() => {
         },
         createRoom: (options) => {
             /**
-             * @options = { users }
+             * @options = { users: Object, optionsString: String }
              */
-            const Room = require('./room.js');
+            const Room = require('./Room.js');
             const room = new Room(options);
-            return rooms.push(room)
+            return rooms[room.id] = room
         },
         removeRoom: (room) => {
             /**
@@ -52,11 +48,11 @@ const state = (() => {
             room.removeUser(users);
         },
 
-        message: (options) => {
+        message: (data) => {
             /**
-             * @options = { string: '', user: '' }
+             * @data = { message: String, user: [Object] }
              */
-            return chat.push(options);
+            return chat.add(data);
         }
     }
 })()

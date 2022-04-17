@@ -1,6 +1,10 @@
 class Chat {
     constructor() {
-        this.message = []
+        this.messages = []
+    }
+
+    add({ user, message }) {
+        this.messages.push({ user, message });
     }
 }
 

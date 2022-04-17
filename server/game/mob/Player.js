@@ -1,10 +1,10 @@
-const Entity = require('./Entity.js');
+const Mob = require('./Mob.js');
 
-class Mob extends Entity {
+class Player extends Mob {
     constructor({ name }) {
         super({ name });
         this.className = '';
     }
 }
 
-module.exports = Mob;
+module.exports = Player;
