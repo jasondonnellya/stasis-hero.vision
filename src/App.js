@@ -6,7 +6,7 @@ import axios from 'axios';
 function App() {
   useEffect(() => {
     const fetchData = async () => {
-      const data = await axios.get(window.API_URL + '/api')
+      const data = await axios.get(window.API_URL + '/api-test')
       console.log(data)
     }
     fetchData()
