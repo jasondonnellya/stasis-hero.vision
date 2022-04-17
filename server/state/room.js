@@ -1,8 +1,7 @@
 class Room {
     constructor({ users, optionsString }) {
         this.users = users;
-        this.enemies = [];
-        this.npcs = [];
+        this.mobs = [];
         this.objs = [];
         this.tile = {};
         this.actions = [];
@@ -17,6 +16,11 @@ class Room {
         this.options.limit = 4;
         //
         this.optionsString = optionsString;
+        this.generate();
+    }
+
+    generate() {
+
     }
 
     loadRoom() {
