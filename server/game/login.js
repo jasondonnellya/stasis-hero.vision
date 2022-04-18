@@ -4,16 +4,19 @@ const login = (router) => {
          * TODO: If there is a user token connected to an account on this device then refresh it or if the token isn't connected, remove it
          * TODO: otherwise create a user account with the provided name,
          * TODO: if there is no name then return error no name
-         */
+        */
         res.send('login');
     })
 }
 
 const updateUser = (router) => {
     router.post('/updateUser', (req, res) => {
-        /**
-         * TODO: Update the connected user data with whatever is passed
-         */
+        const {
+            data: {
+                name,
+                traits
+            },
+        } = req.body // destructure req.body
         res.send('update user');
     })
 }
@@ -46,9 +49,20 @@ const transferAccount = (router) => {
     })
 }
 
+/** @generate ()  */
 const { generate } = require('./token.js');
+/** @mysql ({ query, callback })  */
+const mysql = require('./mysql.js');
 
 const validateUserToken = (req) => {
+    /**
+     * TODO: Check account against JWT Token in database
+     */
+    const bool = false;
+    return bool;
+}
+
+const validateTransferToken = (req) => {
     /**
      * TODO: Check account against JWT Token in database
      */
@@ -71,5 +85,6 @@ module.exports = {
     createTransferToken,
     transferAccount,
     validateUserToken,
+    validateTransferToken,
     setupLoginRoutes
 };

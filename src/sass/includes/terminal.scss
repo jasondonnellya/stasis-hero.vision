@@ -1,0 +1,29 @@
+.terminal {
+    height: calc(100vh - ($terminal-margin * 2));
+    margin: $terminal-margin 0px;
+    padding: $terminal-padding;
+
+    background: $terminal-background;
+    color: $light;
+
+    border: solid;
+    border-color: $terminal-border;
+    border-bottom-right-radius: 10px;
+    border-width: 1px;
+
+    box-shadow: 1px 1px 2px 1px #eae9ed;
+
+    overflow: auto;
+}
+
+.terminal-container {
+    padding-top: 1px;
+    margin-top: -1px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .terminal {
+        margin: 0;
+        height: 100vh;
+    }
+}

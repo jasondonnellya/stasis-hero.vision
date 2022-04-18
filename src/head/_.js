@@ -6,6 +6,8 @@ class Head extends Component {
         return (
             <HelmetProvider>
                 <Helmet>
+                    <title>Stasis Hero: Vision</title>
+
                     {/* Global site tag (gtag.js) - Google Analytics */}
                     {
                         process.env.NODE_ENV === 'production' &&
