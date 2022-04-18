@@ -51,8 +51,8 @@ if(isDev) {
  
 /**
   * ! 404 Catch all redirect to Homepage
+  * TODO: ADD MAINTENANCE RETURN ON ALL ROUTES using process.env.MAINTENANCE
   */
-//ADD MAINTENANCE RETURN ON ALL ROUTES using process.env.MAINTENANCE
 router.get('*', function(req, res){
   res.status(302).redirect('/');
 });
