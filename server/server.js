@@ -12,14 +12,17 @@ const express = require('express');
 const compression = require('compression');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const app = express(); // create express app
 const path = require('path');
 
 app.use(compression());
 app.use(cors({
-  origin: isDev ? 'http://localhost:3000' : 'https://vision.stasishero.com'
+  origin: isDev ? 'http://localhost:3000' : 'https://vision.stasishero.com',
+  credentials: true
 }));
 app.use(bodyParser.json());
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.static(path.join(__dirname, '..', 'build')));
 
 const router = express.Router();
@@ -49,6 +52,7 @@ if(isDev) {
 /**
   * ! 404 Catch all redirect to Homepage
   */
+//ADD MAINTENANCE RETURN ON ALL ROUTES using process.env.MAINTENANCE
 router.get('*', function(req, res){
   res.status(302).redirect('/');
 });
