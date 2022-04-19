@@ -21,7 +21,7 @@ The purpose of this was to increase performance of the app as much as possible a
 
 ### Production
 
-Production is very basic as Express is rigged to serve the static build folder in the root directory so that the API is hosted on the same url.
+Production is very basic as Express is rigged to serve the static build folder in the root directory so that the API is hosted on the same url while avoiding a proxy.
 
 Simply run `npm run start` in the root directory and node will take care of the rest, however please note that only the server will update if edited and the react app will not update until rebuilt.
 
