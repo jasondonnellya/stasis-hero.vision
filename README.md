@@ -1,4 +1,4 @@
-# Stasis Hero: Vision
+# Stasis Hero: Vision (In Development)
 
 ## What is Stasis Hero: Vision
 
