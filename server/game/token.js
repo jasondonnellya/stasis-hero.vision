@@ -33,7 +33,6 @@ const clearToken = (res) => {
 
 const removeSensitiveData = (data) => {
     if(!data) return;
-    delete data.id;
     delete data.jwt; //remove these sensitive values
     delete data.transfer;
     return data
