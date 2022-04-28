@@ -26,6 +26,7 @@ yarn-error.log*
 ###### Custom
 
 ## / (root)
+.env
 package-lock.json
 
 ## /server
