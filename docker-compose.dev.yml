@@ -1,0 +1,38 @@
+services:
+  app:
+    image: node:16-alpine
+    command: sh -c "npm run dev"
+    working_dir: /app
+    volumes: 
+      - ./:/app
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: 'development'
+
+  server:
+    image: node:16-alpine
+    command: sh -c "npm run dev"
+    working_dir: /app/server
+    volumes:
+      - ./:/app
+    ports:
+      - 1337:1337
+    environment:
+      NODE_ENV: 'development'
+      COOKIE_SECRET: 'zKLyyQtQ47wwkZiR'
+      MYSQL_HOST: 'localhost'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: 'RhMG798EXickqfnq'
+      MYSQL_DATABASE: 'stasisherovision'
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - mysql-stasisherovision:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'RhMG798EXickqfnq'
+      MYSQL_DATABASE: 'stasisherovision'
+
+volumes:
+  mysql-stasisherovision:

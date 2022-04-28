@@ -19,6 +19,14 @@ Run
 The / root directory is a React App and the /server directory is run using Express and Nodemon.
 The purpose of this was to increase performance of the app as much as possible and since there is no routing I decided to avoid using a Server Side Renderer.
 
+### Docker
+
+Stasis Hero Vision now supports Docker and can be run locally using:
+
+`docker-compose -f docker-compose.setup.yml up` command for setting up the npm installs and build of react app
+`docker-compose -f docker-compose.dev.yml up` for the dev version after setup
+`docker-compose up` command for spinning up the production version or
+
 ### Production
 
 Production is very basic as Express is rigged to serve the static build folder in the root directory so that the API is hosted on the same url while avoiding a proxy.

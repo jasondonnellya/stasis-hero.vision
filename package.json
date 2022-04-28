@@ -20,10 +20,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "set NODE_ENV=development&react-scripts start",
-    "start": "set NODE_ENV=production&react-scripts build && (cd server && npm start)",
-    "build": "set NODE_ENV=production&react-scripts build && (cd server && npm install && npm start)",
-    "test": "react-scripts test",
+    "test": "react-scripts test && (cd server && npm run test)",
+    "dev": "react-scripts start",
+    "start": "react-scripts build && (cd server && npm start)",
+    "build": "react-scripts build && npm run dev",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
