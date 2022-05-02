@@ -54,7 +54,7 @@ const AppBar = () => {
                     Who-Is
                 </Button>
                 <Dropdown
-                    color="black"
+                    color="link"
                     buttonClasses={ `mr-${globalSpacing}` }
                     dropdownClasses={ `has-text-left` }
                     dropdownContentClasses={ `p-2` }
