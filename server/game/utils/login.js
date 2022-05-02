@@ -1,5 +1,5 @@
 /** @generate ()  */
-const { generate, setToken, getToken, clearToken, removeSensitiveData, validateToken } = require('./token.js');
+const { generate, setToken, getToken, clearToken, validateToken } = require('./token.js');
 /** @mysql ({ query, callback })  */
 const mysql = require('./mysql.js');
 

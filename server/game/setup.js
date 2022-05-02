@@ -1,8 +1,8 @@
-const { init } = require('./database.js');
-const { setupLoginRoutes } = require('./login.js');
+const { initDatabase } = require('./utils/database.js');
+const { setupLoginRoutes } = require('./utils/login.js');
 
 const setup = (router) => {
-    init();
+    initDatabase();
     setupLoginRoutes(router);
 }
 

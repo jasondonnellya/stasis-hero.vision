@@ -1,5 +1,5 @@
 const mysql = require('./mysql.js');
-const init = async () => {
+const initDatabase = async () => {
     /**
      * ! If database tables don't exist then generate
      */
@@ -19,5 +19,5 @@ const init = async () => {
 }
 
 module.exports = {
-    init
+    initDatabase
 }

@@ -4,21 +4,16 @@ import './sass/site.scss';
 import Head from './head/_';
 import axios from 'axios';
 
-import Logo from './components/Logo/_';
-import Container from './components/Container/_';
-import Splash from './components/Splash/_';
-import UserUpdate from './components/User/_Update';
-import Home from './components/Home/_';
+import Container from './components/Utils/Container';
+import AppBar from './components/AppBar/_';
 import Game from './components/Game/_';
 
-import NotSupported from './components/NotSupported/_';
-import Maintenance from './components/Maintenance/_';
+import NotSupported from './components/Utils/NotSupported';
+import Maintenance from './components/Utils/Maintenance';
 
 function App() {
+  let loading = false;
   useEffect(() => {
-    /**
-     * ! find a good way to stop useEffect from rendering twice!!!! (it's creating multiple users)
-     */
     const login = async () => {
       /*
       const data = await axios.post(window.API_URL + '/updateUser',
@@ -31,11 +26,21 @@ function App() {
       )
       */
       const data = await axios.post(window.API_URL + '/login')
-      console.log(data)
+        .then((res) => {
+          loading = false;
+          return res;
+        })
+      console.log(data);
     }
-    login()
+    /**
+     * ! find a good way to stop useEffect from rendering twice!!!! (it's creating multiple users)
+     */
+    if(!loading) {
+      loading = true;
+      login();
+    }
   }, [])
-  const maintenance = true;
+  const maintenance = false;
   return (
     <div className="App">
       <Head />
@@ -47,7 +52,8 @@ function App() {
         :
         <>
           <Container className="is-hidden-mobile">
-            <Logo/>
+            <AppBar active={ true } />
+            <Game/>
           </Container>
           <Container className="is-hidden-desktop is-hidden-tablet">
             <NotSupported />

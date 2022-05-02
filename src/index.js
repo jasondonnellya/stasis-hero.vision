@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { _registerHelpers } from './helpers.js';
-_registerHelpers();
+import { _registerAPI_URL } from './utilities.js';
+_registerAPI_URL();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

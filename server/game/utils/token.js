@@ -16,7 +16,7 @@ const setToken = (jwt, res) => {
     res.cookie('jwt', jwt, {
         secure: process.env.NODE_ENV === 'production',
         httpOnly: true,
-        expires: dayjs().add(30, 'days').toDate(),
+        expires: dayjs().add(30, 'days').toDate(), // change to a lot more or else people lose accounts
         signed: process.env.COOKIE_SECRET ? true : false
     });
     return jwt;
