@@ -1,28 +1,34 @@
 import Logo from './Logo';
-import Dropdown from '../Utils/Dropdown';
+// import Dropdown from '../Utils/Dropdown';
 import Button from '../Utils/Button';
 
 import {
     openReddit,
     globalSpacing
-} from '../../utilities.js';
-import { getPage } from '../../page.js';
+} from '../../js/utilities.js';
+import { getPage } from '../../js/page.js';
 
 import {
+    /*
     faUser,
     faCircleInfo,
     faSquarePen,
+    */
     faGlobe,
+    /*
     faCaretDown,
     faNewspaper,
+    */
     faBug
 } from "@fortawesome/free-solid-svg-icons";
 
+/*
 import {
     faTwitterSquare,
     faRedditSquare,
     faGithubSquare
 } from "@fortawesome/free-brands-svg-icons";
+*/
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -33,19 +39,16 @@ const AppBar = () => {
             <div>
                 <Logo />
             </div>
-            <div className="col-span-2 text-right flex">
+            <div className="col-span-2 flex items-center justify-self-end">
                 <Button
-                    color="tertiary"
-                    textColor="white"
-                    buttonClasses={ `mr-${globalSpacing}` }
+                    buttonClasses={ `bg-tertiary text-white mr-${globalSpacing}` }
                 >
                     <FontAwesomeIcon icon={ faGlobe } className={ `mr-${globalSpacing}`} />
                     Who-Is
                 </Button>
                 <Button
                     color="red-500"
-                    textColor="white"
-                    buttonClasses={ `mr-${globalSpacing} mt-1` }
+                    buttonClasses={ `bg-red-600 text-white px-2 h-8 text-xs` }
                     handler={ openReddit }
                 >
                     <FontAwesomeIcon icon={ faBug } className={ `mr-${globalSpacing}`} />

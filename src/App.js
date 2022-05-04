@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
+// import { useEffect, useState } from 'react'
 import './css/tailwind.css';
 
 import Head from './head/_';
-import axios from 'axios';
+// import axios from 'axios';
 
 import Container from './components/Utils/Container';
 import AppBar from './components/AppBar/_';
@@ -11,10 +11,6 @@ import Game from './components/Game/_';
 import NotSupported from './components/Utils/NotSupported';
 import Maintenance from './components/Utils/Maintenance';
 
-function App() {
-  let loading = false;
-  useEffect(() => {
-    const login = async () => {
       /*
       const data = await axios.post(window.API_URL + '/updateUser',
         {
@@ -25,21 +21,25 @@ function App() {
         }
       )
       */
+
+function App() {
+  /*
+  let [loading, setLoading] = useState(false);
+  useEffect(() => {
+    const login = async () => {
       const data = await axios.post(window.API_URL + '/login')
         .then((res) => {
-          loading = false;
+          setLoading(false)
           return res;
         })
       console.log(data);
     }
-    /**
-     * ! find a good way to stop useEffect from rendering twice!!!! (it's creating multiple users)
-     */
     if(!loading) {
-      loading = true;
+      setLoading(true)
       login();
     }
-  }, [])
+  }, [loading])
+  */
   const maintenance = false;
   return (
     <div className="App">
@@ -51,11 +51,11 @@ function App() {
         <Maintenance />
         :
         <>
-          <Container className="is-hidden-mobile">
+          <Container className="sm:block hidden">
             <AppBar active={ true } />
             <Game/>
           </Container>
-          <Container className="is-hidden-desktop is-hidden-tablet">
+          <Container className="sm:hidden block">
             <NotSupported />
           </Container>
         </>

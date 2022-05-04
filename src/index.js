@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { _registerAPI_URL } from './utilities.js';
+import { _registerAPI_URL } from './js/utilities.js';
 _registerAPI_URL();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

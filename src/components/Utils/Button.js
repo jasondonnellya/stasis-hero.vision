@@ -1,5 +1,5 @@
 const Button = ({ ...props }) => {
-    const { children, color, textColor, buttonClasses, handler } = props
+    const { children, buttonClasses, handler } = props
     return (
         <button
             className={
@@ -7,10 +7,7 @@ const Button = ({ ...props }) => {
                 py-2
                 px-4
                 rounded
-                bg-${color}
                 hover:opacity-75
-                text-${textColor}
-                text-red-100
                 ${buttonClasses}
                 `
             }

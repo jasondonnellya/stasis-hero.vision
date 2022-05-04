@@ -5,6 +5,9 @@ import Home from './Home/_';
 const Game = () => {
     return (
         <>
+            <Splash />
+            <UserUpdate />
+            <Home />
         </>
     )
 }
