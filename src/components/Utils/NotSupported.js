@@ -1,7 +1,7 @@
 const NotSupported = () => {
     return (
-        <div className="content has-text-centered">
-            <p className="subtitle has-text-secondary">Oops! Maybe you're on mobile?</p>
+        <div className="text-center">
+            <p className="text-lg text-secondary">Oops! Maybe you're on mobile?</p>
             <p>
                 Stasis Hero: Vision is not currently supported on smaller screen sizes. Apologies for any inconvenience.
             </p>

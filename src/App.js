@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import './sass/site.scss';
+import './css/tailwind.css';
 
 import Head from './head/_';
 import axios from 'axios';

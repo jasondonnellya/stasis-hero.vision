@@ -1,8 +1,8 @@
 const Logo = () => {
     return (
-        <div className="logo">
-            <h1 className="title is-family-secondary has-text-light">
-                Stasis Hero: <span className="has-text-primary">Vision</span>
+        <div>
+            <h1 className="text-4xl font-ancient">
+                Stasis Hero: <span className="text-primary">Vision</span>
             </h1>
         </div>
     )

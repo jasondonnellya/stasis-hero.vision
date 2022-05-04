@@ -1,9 +1,18 @@
 const Button = ({ ...props }) => {
-    const { children, color, buttonClasses, handler } = props
+    const { children, color, textColor, buttonClasses, handler } = props
     return (
         <button
             className={
-                `button is-${color} ${buttonClasses}`
+                `
+                py-2
+                px-4
+                rounded
+                bg-${color}
+                hover:opacity-75
+                text-${textColor}
+                text-red-100
+                ${buttonClasses}
+                `
             }
             onClick={ handler }
         >

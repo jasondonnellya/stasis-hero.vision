@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+
+@import './fonts.css';
+@import './body.css';
+@import './terminal.css';
+
+/* custom */ 
+
+a {
+    @apply text-link;
+}
+
+a:hover {
+    @apply md:opacity-50 opacity-100;
+}
+
+/**/
+
+@tailwind utilities;
