@@ -1,20 +1,10 @@
 .terminal {
     height: calc(100vh - (40px * 2));
-    margin: 40px 0px;
-    padding: 20px;
+    @apply my-10 p-4 shadow relative overflow-auto border-2 text-gray-100;
 
     background: #131319;
-    color: #f8f8f8;
-
-    border: solid;
     border-color: #11454a;
     border-bottom-right-radius: 10px;
-    border-width: 1px;
-
-    box-shadow: 1px 1px 2px 1px #eae9ed;
-
-    position: relative;
-    overflow: auto;
 }
 
 .terminal-container {

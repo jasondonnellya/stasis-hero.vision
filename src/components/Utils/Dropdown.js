@@ -1,21 +1,64 @@
 import { useState } from 'react';
 import Button from './Button.js';
+import { globalSpacing } from '../../js/utilities.js';
+
 const Dropdown = ({ children, ...props }) => {
-    const { color, buttonClasses, dropdownClasses, dropdownContentClasses, label, icon } = props
+    const { buttonClasses, label, icon } = props
     const [active, setActive] = useState(false);
     return (
         <>
-            <div className={`dropdown ${active ? 'is-active' : ''} ${dropdownClasses}`}>
-                <div className="dropdown-trigger">
-                    <Button color={ color } buttonClasses={ buttonClasses } handler={ () => setActive(!active) }>
-                        { icon }
-                        { label }
-                    </Button>
-                </div>
-                <div className="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div className={ `dropdown-content ${dropdownContentClasses}` }>
-                        { children }
-                    </div>
+            <div onBlur={ (e) => {
+                        if (!e.currentTarget.contains(e.relatedTarget)) {
+                            setActive(false)
+                        }
+                    }
+                }>
+                <Button
+                    buttonClasses={ buttonClasses }
+                    handler={ () => setActive(!active) }
+                >
+                    { icon }
+                    { label }
+                </Button>
+                {
+                    active ?
+                        <div>
+                            { children }
+                        </div>
+                    : ''
+                }
+            </div>
+        </>
+    )
+}
+
+Dropdown.Content = ({ children }) => {
+    return (
+        <>
+            <div
+                className={
+                    `
+                    absolute
+                    mt-${globalSpacing}
+                    rounded
+                    text-black
+                    `
+                }
+                style={
+                    {
+                        background: 'url(https://img.freepik.com/free-vector/white-background-with-zigzag-pattern-design_1017-33197.jpg?w=2000)',
+                    }
+                }
+            >
+                <div
+                    className={
+                        `
+                        rounded
+                        backdrop-blur-sm
+                        `
+                    }
+                >
+                    { children }
                 </div>
             </div>
         </>

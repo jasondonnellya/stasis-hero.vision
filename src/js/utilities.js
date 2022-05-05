@@ -11,10 +11,26 @@ function _generateTailwindSafelist() {
     return classes
 }
 
-function openReddit() {
-    return window.open('https://www.reddit.com/r/StasisHero/');
+/** open links */
+
+function openLink(link) {
+    return window.open(link)
 }
+
+function openTwitter() {
+    return openLink(`https://twitter.com/StasisHeroDev/`);
+}
+
+function openReddit() {
+    return openLink(`https://www.reddit.com/r/StasisHero/`);
+}
+
+function openGithub() {
+    return openLink(`https://github.com/jasondonnellya/stasis-hero.vision/commits/master/`);
+}
+
+/** */
 
 const globalSpacing = 3;
 
-module.exports = { _registerAPI_URL, _generateTailwindSafelist, openReddit, globalSpacing }
+module.exports = { _registerAPI_URL, _generateTailwindSafelist, openLink, openTwitter, openReddit, openGithub, globalSpacing }

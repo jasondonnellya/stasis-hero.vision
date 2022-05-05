@@ -1,5 +1,5 @@
-const Button = ({ ...props }) => {
-    const { children, buttonClasses, handler } = props
+const Button = ({ children, ...props }) => {
+    const { buttonClasses, handler } = props
     return (
         <button
             className={
@@ -11,11 +11,22 @@ const Button = ({ ...props }) => {
                 ${buttonClasses}
                 `
             }
-            onClick={ handler }
+            onClick=
+            {
+                (e) => {
+                    e.stopPropagation()
+                    handler()
+                }
+            }
         >
             { children }
         </button>
     )
+}
+
+Button.defaultProps = {
+    buttonClasses: '',
+    handler: () => console.log('Button')
 }
 
 export default Button
