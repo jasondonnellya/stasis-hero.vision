@@ -1,13 +1,14 @@
-import Splash from './Splash/_';
-import UserUpdate from './User/_Update';
-import Home from './Home/_';
+import Display from './Display/_';
+import CommandBar from './CommandBar/_';
+import Users from './Users/_';
+
 
 const Game = () => {
     return (
         <>
-            <Splash />
-            <UserUpdate />
-            <Home />
+            <Display />
+            <CommandBar />
+            <Users />
         </>
     )
 }

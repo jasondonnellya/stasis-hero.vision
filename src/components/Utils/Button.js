@@ -4,10 +4,12 @@ const Button = ({ children, ...props }) => {
         <button
             className={
                 `
+                transition
                 py-2
                 px-4
                 rounded
                 hover:opacity-75
+                hover:translate-y-1
                 ${buttonClasses}
                 `
             }

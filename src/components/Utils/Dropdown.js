@@ -55,6 +55,7 @@ Dropdown.Content = ({ children }) => {
                         `
                         rounded
                         backdrop-blur-sm
+                        p-${globalSpacing}
                         `
                     }
                 >

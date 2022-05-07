@@ -6,10 +6,17 @@ import Head from './head/_';
 
 import Container from './components/Utils/Container';
 import AppBar from './components/AppBar/_';
+
+import Splash from './components/Splash/_';
+import Home from './components/Home/_';
+import User from './components/User/_';
+import UserUpdate from './components/User/Update';
 import Game from './components/Game/_';
 
 import NotSupported from './components/Utils/NotSupported';
 import Maintenance from './components/Utils/Maintenance';
+
+import { usePage } from './store/page'
 
       /*
       const data = await axios.post(window.API_URL + '/updateUser',
@@ -41,6 +48,7 @@ function App() {
   }, [loading])
   */
   const maintenance = false;
+  const page = usePage()
   return (
     <div className="App">
       <Head />
@@ -53,7 +61,11 @@ function App() {
         <>
           <Container className="sm:block hidden">
             <AppBar active={ true } />
-            <Game/>
+            <Splash />
+            <Home />
+            <User />
+            <UserUpdate />
+            <Game />
           </Container>
           <Container className="sm:hidden block">
             <NotSupported />

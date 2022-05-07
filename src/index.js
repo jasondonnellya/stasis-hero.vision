@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+/** Register Utilities */
+import { _registerAPI_URL } from './js/utilities';
 
-import { _registerAPI_URL } from './js/utilities.js';
+import { store } from './store/_'
+import { Provider } from 'react-redux'
+
 _registerAPI_URL();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={ store }>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 

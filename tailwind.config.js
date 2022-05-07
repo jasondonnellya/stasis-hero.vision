@@ -1,5 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const { _generateTailwindSafelist } = require('./src/js/utilities.js')
+const { _generateTailwindSafelist } = require('./src/js/utilities')
 
 module.exports = {
   content: [
