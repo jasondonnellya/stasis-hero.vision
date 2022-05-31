@@ -44,3 +44,7 @@ For running in development you will need to run both the React App and the serve
 * Run `npm run dev` again in the new terminal.
 
 The app will run on `localhost:3000` while the server will run on `localhost:1337`.
+
+### TODO
+
+Add knex to project to clean up MySQL calls.
